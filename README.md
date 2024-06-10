@@ -26,5 +26,6 @@ Steps
 19. Add a Script Path (eg. jenkinsfile where deployment stages are written)
 20. Tap Build Now
 21. Check the deployment on Tomcat server in Manager App.
+22. To make this whole ci/cd automated, Enable the Poll SCM and ***** in schedule. Also enable 'Build whenever a SNAPSHOT dependency is built'
 
 Thankyou
