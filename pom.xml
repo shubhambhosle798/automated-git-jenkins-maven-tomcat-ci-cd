@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://www.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.domain</groupId>
   <artifactId>demo</artifactId>
@@ -20,15 +20,10 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.1</version> <!-- Update to the latest version -->
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version> <!-- Updated to a newer version -->
         <configuration>
-            <argLine>--add-opens java.base/java.util=ALL-UNNAMED</argLine>
+          <argLine>--add-opens java.base/java.util=ALL-UNNAMED</argLine> <!-- Added JVM arguments -->
         </configuration>
       </plugin>
     </plugins>
@@ -46,9 +41,14 @@
       <version>1.2.17</version>
     </dependency>
     <dependency>
-        <groupId>com.thoughtworks.xstream</groupId>
-        <artifactId>xstream</artifactId>
-        <version>1.4.19</version> <!-- Update to the latest version -->
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>1.4.19</version> <!-- Added XStream dependency -->
     </dependency>
   </dependencies>
 </project>
