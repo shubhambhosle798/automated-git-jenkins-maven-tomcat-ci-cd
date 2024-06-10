@@ -21,9 +21,9 @@
       </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.1</version> <!-- Updated to a newer version -->
+        <version>3.3.1</version>
         <configuration>
-          <argLine>--add-opens java.base/java.util=ALL-UNNAMED</argLine> <!-- Added JVM arguments -->
+          <argLine>--add-opens java.base/java.util=ALL-UNNAMED</argLine>
         </configuration>
       </plugin>
     </plugins>
@@ -48,7 +48,7 @@
     <dependency>
       <groupId>com.thoughtworks.xstream</groupId>
       <artifactId>xstream</artifactId>
-      <version>1.4.19</version> <!-- Added XStream dependency -->
+      <version>1.4.19</version>
     </dependency>
   </dependencies>
 </project>
