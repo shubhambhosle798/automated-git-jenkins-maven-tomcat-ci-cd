@@ -20,9 +20,9 @@ Steps
 13. Download 'Maven Integration plugin' and 'Git Integration Plugin', so the respective commands can run
 14. Also download 'Deploy To Container Plugin', so that your war file can be uploaded to your Tomcat server
 15. Configure the jdk, Git and Maven plugins in Tools configuration
-16. Create the Declarative Pipeline job
-17. Where select Pipeline Definition as 'Pipeline script from SCM', In SCM choose Git and add the repository link, also add repository credential if added in GitHub.
-18. Add the Branch
+16. Create the Declarative Pipeline job or Freestyle job
+17. Provide GitHub Repository and Add the Branch
+18. Setup the war where you add Tomcat's iP address
 19. Add a Script Path (eg. jenkinsfile where deployment stages are written)
 20. Tap Build Now
 21. Check the deployment on Tomcat server in Manager App.
