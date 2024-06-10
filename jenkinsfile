@@ -1,4 +1,4 @@
-def tomcatServerUrl = "http://172.31.34.22:8080/manager/text"
+def tomcatServerUrl = "http://172.31.34.22:8080/manager/text"  // Include port and manager path
 
 pipeline {
   agent {
@@ -7,11 +7,16 @@ pipeline {
     }
   }
 
+  environment {
+    GIT_REPO = 'https://github.com/shubhambhosle798/git-jenkins-maven-tomcat-ci-cd.git'
+    BRANCH = 'main'
+  }
+
   stages {
     stage('Code checkout') {
       steps {
         // Download code from GitHub
-        git 'https://github.com/ajitinamdar-tech/jenkins-cicd-java-maven-demo.git'
+        git branch: "${env.BRANCH}", url: "${env.GIT_REPO}"
       }
     }
     stage('Build') {
@@ -22,7 +27,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        // Deploy war on Tomcat server
+        // Deploy WAR on Tomcat server
         deploy adapters: [tomcat8(url: "${tomcatServerUrl}",
             credentialsId: 'tomcat-credentials')],
           war: 'target/*.war',
