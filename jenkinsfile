@@ -1,4 +1,4 @@
-def tomcatServerUrl = "http://172.31.34.22:8080/manager/text"  // Include port and manager path
+def tomcatServerUrl = "http://172.31.34.22:8080/manager/text"
 
 pipeline {
   agent {
