@@ -1,7 +1,7 @@
 # git-jenkins-maven-tomcat-ci/cd
 
 Hello
-In this project, I have demonstrated scalable CI/CD pipeline of Git, Jenkins, Maven and Tomcat to deploy java web application.
+In this project, I have demonstrated scalable and automated CI/CD pipeline of Git, Jenkins, Maven and Tomcat to deploy java web application.
 Used both Declarative Pipeline setup & Freestyle setup for deployment.
 
 Steps
