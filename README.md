@@ -8,7 +8,7 @@ This project demonstrates a complete Continuous Integration and Continuous Deplo
   - **main/java/Hello.java**: Sample Java class.
   - **main/webapp/index.jsp**: JSP file for the web application.
   - **main/webapp/WEB-INF/web.xml**: Web deployment descriptor.
-- **test/**: Directory for test cases (currently empty).
+- **test/**: This is created to test automation of CI/CD.
 - **jenkinsfile**: Jenkins pipeline configuration file.
 - **pom.xml**: Maven Project Object Model file for managing project dependencies and build configuration.
 - **README.md**: Project documentation.
@@ -55,7 +55,7 @@ cd automated-git-jenkins-maven-tomcat-ci-cd
 - **Pipeline Stages**: The Jenkins pipeline includes the following stages:
   - Checkout: Retrieves the latest code from the Git repository.
   - Build: Compiles the Java code and packages it into a WAR file using Maven.
-  - Test: Runs any test cases defined in the project.
+  - Test: Runs any test.
   - Deploy: Deploys the WAR file to the Tomcat server.
  
 ## Acknowledgments
