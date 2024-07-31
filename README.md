@@ -1,31 +1,67 @@
-# git-jenkins-maven-tomcat-ci/cd
+# Automated Git-Jenkins-Maven-Tomcat CI/CD
 
-Hello
-In this project, I have demonstrated scalable and automated CI/CD pipeline of Git, Jenkins, Maven and Tomcat to deploy java web application.
-Used both Declarative Pipeline setup & Freestyle setup for deployment.
+This project demonstrates a complete Continuous Integration and Continuous Deployment (CI/CD) pipeline using Git, Jenkins, Maven, and Tomcat. The repository includes sample Java code, a Jenkinsfile for pipeline configuration, and necessary project files to build and deploy a Java web application.
 
-Steps
-1. Create the repository in GitHub
-2. Clone your repository in local machine.
-3. Push your project file from local machine to GitHub repository
-4. Create 3 Servers - Jenkins Master, Jenkins Agent, Tomcat. (Servers can be scalable according to your need)
-5. In Jenkins Master, install jdk and Jenkins
-6. In Jenkins Agent, install jdk, Jenkins, Git and Maven
-7. In Tomcat server, install jdk and Tomcat
-8. Start the Jenkins service on Jenkins Master and Tomcat on Tomcat server
-9. Configure the Tomcat Manager in 'tomcat-users.xml' file
-10. Hit public iP of Jenkins Master server in webpage and configure Jenkins
-11. After configuring, add a node of Jenkins Agent
-12. After adding, check if Agent is online.
-13. Download 'Maven Integration plugin' and 'Git Integration Plugin', so the respective commands can run
-14. Also download 'Deploy To Container Plugin', so that your war file can be uploaded to your Tomcat server
-15. Configure the jdk, Git and Maven plugins in Tools configuration
-16. Create the Declarative Pipeline job or Freestyle job
-17. Provide GitHub Repository and Add the Branch
-18. Setup the war where you add Tomcat's iP address
-19. Add a Script Path (eg. jenkinsfile where deployment stages are written)
-20. Tap Build Now
-21. Check the deployment on Tomcat server in Manager App.
-22. To make this whole ci/cd automated, Enable the Poll SCM and * * * * * in schedule. Also enable 'Build whenever a SNAPSHOT dependency is built'
+## Project Structure
 
-Thankyou
+- **src/**: Contains the source code for the Java application.
+  - **main/java/Hello.java**: Sample Java class.
+  - **main/webapp/index.jsp**: JSP file for the web application.
+  - **main/webapp/WEB-INF/web.xml**: Web deployment descriptor.
+- **test/**: Directory for test cases (currently empty).
+- **jenkinsfile**: Jenkins pipeline configuration file.
+- **pom.xml**: Maven Project Object Model file for managing project dependencies and build configuration.
+- **README.md**: Project documentation.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- Git
+- Jenkins
+- Maven
+- Tomcat
+
+## Getting Started
+
+Follow these steps to set up and run the CI/CD pipeline:
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/automated-git-jenkins-maven-tomcat-ci-cd.git
+cd automated-git-jenkins-maven-tomcat-ci-cd
+```
+
+### Configure Jenkins
+
+1. **Install Jenkins**: If Jenkins is not already installed, download and install it from Jenkins official site.
+2. **Install Plugins**: Ensure the following Jenkins plugins are installed:
+   - Git Plugin
+   - Maven Integration Plugin
+   - Deploy to Container Plugin
+
+## Set Up Jenkins Job
+1. **Build the Project**: Trigger the Jenkins job to build the project using Maven. This will compile the code, run tests, and package the application into a WAR file.
+2. **Pipeline Configuration**: Use the 'jenkinsfile' from this repository to configure the pipeline script.
+3. **Set Up Git Repository**: In the Source Code Management section, configure the Git repository URL and credentials.
+
+## Build and Deploy
+1. **Build the Project**: Trigger the Jenkins job to build the project using Maven. This will compile the code, run tests, and package the application into a WAR file.
+2. **Deploy to Tomcat**: After a successful build, the pipeline will deploy the WAR file to the Tomcat server.
+
+## Usage
+- **Access the Application**: Once deployed, you can access the application through your Tomcat server URL, typically 'http://localhost:8080/your-app-name'.
+- **Pipeline Stages**: The Jenkins pipeline includes the following stages:
+  - Checkout: Retrieves the latest code from the Git repository.
+  - Build: Compiles the Java code and packages it into a WAR file using Maven.
+  - Test: Runs any test cases defined in the project.
+  - Deploy: Deploys the WAR file to the Tomcat server.
+ 
+## Acknowledgments
+Thanks to the Jenkins and Maven communities for their extensive documentation and support.
+
+## Contact
+For any questions or feedback, please reach out to bhosleshubham798@gmail.com or open an issue in the repository.
+
+## Thank you for visiting this project repository!
