@@ -29,7 +29,7 @@ Follow these steps to set up and run the CI/CD pipeline:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/automated-git-jenkins-maven-tomcat-ci-cd.git
+git clone https://github.com/shubhambhosle798/automated-git-jenkins-maven-tomcat-ci-cd.git
 cd automated-git-jenkins-maven-tomcat-ci-cd
 ```
 
